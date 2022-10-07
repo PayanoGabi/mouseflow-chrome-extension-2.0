@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+  }
+  
+  .App {
+    height: 100%;
+  }
+  
+  .diagnostics-list > .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: black;
+    animation-name: progress;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes progress {
+    from {width: 0%;}
+    to {width: 88%;}
+  }

@@ -1,0 +1,52 @@
+{
+  "name": "mouseflow-support-chrome-extension",
+  "version": "1.3.0",
+  "description": "Mouseflow Support for Chrome",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch src --exec \"npm run build\" --verbose -e ts,tsx,css,html,json",
+    "prebuild": "rimraf build",
+    "build": "webpack",
+    "postbuild": "copyfiles -u 1 ./src/**/*.{svg,jpg,png,html,css,js,json} ./build"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "@types/chrome": "0.0.114",
+    "@types/jquery": "^3.5.0",
+    "@types/js-cookie": "^2.2.6",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^3.0.2",
+    "@typescript-eslint/parser": "^3.0.2",
+    "clsx": "^1.1.0",
+    "copyfiles": "^2.3.0",
+    "css-loader": "^3.5.3",
+    "eslint": "^7.1.0",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-terminal": "^1.3.0",
+    "rimraf": "^3.0.2",
+    "source-map-loader": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.18.31",
+    "@types/webpack": "^5.28.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "declaration-bundler-webpack-plugin": "^1.0.3",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.10",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "wepack-cli": "0.0.1-security"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
