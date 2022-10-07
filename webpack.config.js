@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   entry: {
     popup: './src/popup.tsx',
-    devtools: './src/devtools.tsx',
+    devtools: './src/devtools.ts',
     panel: './src/panel.tsx',
     pageScript: './src/pageScript.ts',
     background: './src/background.ts',
