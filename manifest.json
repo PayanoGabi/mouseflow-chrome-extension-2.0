@@ -18,10 +18,13 @@
       "run_at": "document_end"
     }
   ],
-
-
   "action": {
-    "default_popup": "",
+    "default_popup": "popup.html",
     "default_icon": "assets/images/mf_inactive.png"
-  }
+  },
+  "web_accessible_resources": [{ 
+    "resources": ["pageScript.js"],
+    "matches": ["<all_urls>"]
+   
+  }]
 }
