@@ -5,10 +5,10 @@
   "description": "Mouseflow Support Chrome Extension",
   "permissions": [],
   "icons": { 
-    "16": "src/assets/images/icon16.png",
-    "32": "src/assets/images/icon32.png",
-    "48": "src/assets/images/icon48.png",
-   "128": "src/assets/images/icon128.png" 
+    "16": "/src/assets/images/icon16.png",
+    "32": "/src/assets/images/icon32.png",
+    "48": "/src/assets/images/icon48.png",
+   "128": "/src/assets/images/icon128.png" 
   },
 
   "content_scripts": [
@@ -23,7 +23,7 @@
     "default_icon": "assets/images/mf_inactive.png"
   },
   "web_accessible_resources": [{ 
-    "resources": ["pageScript.js"],
+    "resources": ["/build/pageScript.js"],
     "matches": ["<all_urls>"]
    
   }]
