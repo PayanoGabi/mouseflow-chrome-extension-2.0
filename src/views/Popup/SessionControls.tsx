@@ -61,11 +61,11 @@ const SessionControls: React.FC<SessionControlsProps> = function({ isRecording, 
         <div className="btn-group btn-group-toggle" data-toggle="buttons">
           <label className={clsx("btn btn-secondary", { active: isRecording })}>
             <input type="radio" name="options" id="start-session" checked={isRecording} onClick={handleStartSession} />
-            <img style={{ height: '1em' }} src={isRecording ? "assets/images/circle-solid-red.svg" : "assets/images/circle-solid.svg"} />
+            <img style={{ height: '1em' }} src={isRecording ? "/src/assets/images/circle-solid-red.svg" : "/src/assets/images/circle-solid.svg"} />
           </label>
           <label className={clsx("btn btn-secondary", { active: !isRecording })}>
             <input type="radio" name="options" id="stop-session" checked={!isRecording} onClick={handleStopSession} />
-            <img style={{ height: '1em' }} src="assets/images/square-solid.svg" />
+            <img style={{ height: '1em' }} src="/src/assets/images/square-solid.svg" />
           </label>
         </div>
         <div className={clsx("badge ml-2", isRecording ? 'badge-danger' : 'badge-secondary')}>
@@ -77,14 +77,14 @@ const SessionControls: React.FC<SessionControlsProps> = function({ isRecording, 
           className="btn btn-secondary d-flex align-items-center mr-2"
           onClick={handleResetSession}
         >
-          {`Reset`}<img className="ml-2" style={{ width: '1em' }} src="assets/images/redo-light.svg" />
+          {`Reset`}<img className="ml-2" style={{ width: '1em' }} src="/src/assets/images/redo-light.svg" />
         </button>
         <a 
           className="btn btn-info d-flex"
           href={`https://app.mouseflow.com/websites/${websiteId}/recordings/${sessionId}/play`} 
           target="_blank"
         >
-          {`View session`}<img className="ml-2" style={{ width: '1em' }} src="assets/images/external-link-light.svg" />
+          {`View session`}<img className="ml-2" style={{ width: '1em' }} src="src/assets/images/external-link-light.svg" />
         </a>
       </div>
     </>

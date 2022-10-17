@@ -9,22 +9,22 @@ chrome.runtime.onMessage.addListener(
       
       if (message.payload.isRecording) { // Recording
         if (hasErrors) {
-          chrome.browserAction.setIcon({ path: '/assets/images/mf_recording_warning.png' });
+          chrome.browserAction.setIcon({ path: './src/assets/images/mf_recording_warning.png' });
         } else {
-          chrome.browserAction.setIcon({ path: '/assets/images/mf_recording.png' });
+          chrome.browserAction.setIcon({ path: './src/assets/images/mf_recording.png' });
         }
   
       } else { // Not recording
         
         if (message.payload.installations.length) {
           if (hasErrors) {
-            chrome.browserAction.setIcon({ path: '/assets/images/mf_warning.png' });
+            chrome.browserAction.setIcon({ path: './src/assets/images/mf_warning.png' });
           } else {
-            chrome.browserAction.setIcon({ path: '/assets/images/mf_active.png' });
+            chrome.browserAction.setIcon({ path: './src/assets/images/mf_active.png' });
           }
     
         } else {
-          chrome.browserAction.setIcon({ path: '/assets/images/mf_inactive.png' });
+          chrome.browserAction.setIcon({ path: './src/assets/images/mf_inactive.png' });
         }
       }
     }

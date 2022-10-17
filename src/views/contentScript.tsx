@@ -49,7 +49,7 @@ if (window.location.host === "us.mouseflow.com" ||
 
 // Attach and run page script to access Window properties
 const mfPageScript = document.createElement('script');
-mfPageScript.src = chrome.runtime.getURL('build/pageScript.js');
+mfPageScript.src = chrome.runtime.getURL('/build/pageScript.js');
 document.head.appendChild(mfPageScript);
 
 // Proxy events from Page Script to Background

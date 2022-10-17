@@ -11,7 +11,7 @@
    function(message: MouseflowEventDetail, sender, sendResponse) {
      if (message.type === MouseflowEventType.RECEIVE_DIAGNOSTICS) {
        if (message.payload.installations.length && !panelCreated) {
-         chrome.devtools.panels.create("Mouseflow", "assets/images/icon16.png", "panel.html");
+         chrome.devtools.panels.create("Mouseflow", "src/assets/images/icon16.png", "panel.html");
          panelCreated = true;
        }
      }
